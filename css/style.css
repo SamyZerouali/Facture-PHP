@@ -1,0 +1,152 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    letter-spacing: .025em;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+/* FIN RESET */
+
+/* Page */
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.facture {
+    width: 210mm;
+    height: 297mm;
+    margin: 10px auto;
+    padding: 40px 80px;
+    background-color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Fin de la page */
+
+/* Le Header */
+
+header img {
+    width: 200px;
+}
+
+header{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .informations_client{
+    align-self: flex-end;
+    text-align: right;
+}
+/* Fin Header */
+
+.lafacture ul li {
+    margin-top: 80px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    list-style: inside;
+}
+
+.lafacture ul li .date {
+    color: rgb(182, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Tableau */
+
+table {
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 4px;
+}
+
+tbody tr th {
+    font-weight: 600;
+}
+
+/* Fin Tableau */
+
+.lafacture p {
+    margin-top: 10px;
+}
+
+.apayer {
+    float: right;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.payement {
+    position: absolute;
+    bottom: 105px;
+    padding: 8px;
+    border: 2px solid rgb(0, 119, 255);
+    border-radius: 10px;
+}
+
+.facture footer {
+    max-width: 160mm;
+    margin: 0px auto;
+    font-size: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    color: rgb(87, 87, 87);
+}
+
+input, textarea {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #aaa;
+    background: #fff;
+    font: bold 13px Arial;
+    color: #555;
+    align-self: center;
+    height: 28px;
+    max-width: 150px;
+}
+
+.bonus {
+    width: 210mm;
+    margin: 5px auto;
+}
+
+@media print {
+    .facture{
+        box-shadow: none;
+        height: 290mm; /* sinon ça fait 2 pages */
+    }
+    .bonus{
+        display: none;
+    }
+}
