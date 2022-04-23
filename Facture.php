@@ -8,15 +8,15 @@ include("variables.php");
 <head>
     <!-- En-tête de la page-->
     <meta charset="utf-8">
-    <meta name="description" content="madescription..." />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Facture Free Mobile</title>
+    <meta name="description" content="Votre facture SFR du mois de fevrier" />
+    <link rel="stylesheet" href="style.css">
+    <title>Facture SFR</title>
 </head>
 
 <body>
     <div class="facture">
         <header>
-            <figure><img src="http://sti2dtransversal.free.fr/images/freemobile.png" alt="Logo Free Mobile"></figure>
+            <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Logo_SFR_2014.svg/1200px-Logo_SFR_2014.svg.png" alt="Logo SFR"></figure>
 
             <div class="informations_client">
                 <p>
@@ -30,9 +30,9 @@ include("variables.php");
             </div>
         </header>
 
-        <div class="lafacture">
+        <div class="corps">
             <ul>
-                <li> Facture n°<?php  echo($numero_facture); ?> du <span class="date"> <?php echo($date); ?></span>
+                <li> Facture n<?php  echo($numero_facture); ?> du <span class="date"> <?php echo($date); ?></span>
                 </li>
             </ul>
             <hr>
@@ -48,7 +48,7 @@ include("variables.php");
                     ?>
                     </tr>
                     <?php
-                            for ($j = 0; $j < count($produit); $j++) // ou alors foreach($produit as $element2) ET changer tous les $produit[$j] 
+                            for ($j = 0; $j < count($produit); $j++)
                         {   echo("<tr>
                                     <td>".$produit[$j]["ref"]."</td>
                                     <td>".$produit[$j]["nom"]."</td>
@@ -90,9 +90,9 @@ include("variables.php");
             </p>
 
 
-            <div class="apayer">A payer : <?php echo(number_format($total_ttc,2,","," ")." €"); ?> </div>
+            <div class="resteapayer">A payer : <?php echo(number_format($total_ttc,2,","," ")." €"); ?> </div>
         </div>
-        <div class="payement">
+        <div class="prelevement">
             Prélèvement automatique : <br>
             <?php 
                 echo(mt_rand(0,9).mt_rand(0,9).mt_rand(0,9).mt_rand(0,9)." **** **".mt_rand(0,9).mt_rand(0,9));
@@ -104,14 +104,13 @@ include("variables.php");
 
 
         <footer>
-            Free Mobile – SAS au capital de 365 138 779 Euros – RCS PARIS 499 247 138 – Siege social : 16 rue de la
-            Ville l’Evèque 75008 Paris <br>
-            n° TVA Intracommunautaire : FR25499247138
+        SFR, 42 AVENUE DE FRIEDLAND 75008 PARIS SA AU CAPITAL DE 3 423 265 598,40 EUR RCS PARIS <br>
+        N° TVA FR 71 343059564 
 
         </footer>
     </div>
 
-    <div class="bonus">
+    <div class="imprimer">
         <div class="imp"><input type="button" value="Imprimer" onclick="window.print()"></div>
     </div>
 
